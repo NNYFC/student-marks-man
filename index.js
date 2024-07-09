@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const router = require('./src/routes/route');
 
 const app = express();
 app.use(bodyParser.json());
@@ -10,15 +11,9 @@ app.get('/', (req, res)=>{
     res.send('Hello world!');
 });
 
-app.get('/student/:name', (req, res)=>{
-  let name = req.params.name;
-  res.send(`Hello ${name}!`);
-});
 
-app.post('/student', (req, res)=>{
-  let {name, email} = req.body
-  res.send({ 'name': name, 'email': email });
-});
+// mount the router on the app
+app.use('/router', router)
 
 app.listen(port, ()=>{
     console.log(`Server listening on port http://localhost:${port}`);
