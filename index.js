@@ -13,7 +13,7 @@ app.get('/', (req, res)=>{
 
 
 // mount the router on the app
-app.use('/router', router)
+app.use('/api', router)
 
 app.listen(port, ()=>{
     console.log(`Server listening on port http://localhost:${port}`);
