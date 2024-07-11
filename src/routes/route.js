@@ -14,9 +14,6 @@ router.get('/student/:name', (req, res)=>{
     res.send(`Hello ${name}!`);
 });
   
-router.post('/student', (req, res)=>{
-    let {name, email} = req.body
-    res.status(201).send({ 'name': name, 'email': email });
-});
+router.post('/student', controller.saveStudent);
 
 module.exports = router; 

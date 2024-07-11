@@ -42,6 +42,9 @@ build/Release
 node_modules/
 jspm_packages/
 
+# DB Configurations
+src/db_config.js
+
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/
 
