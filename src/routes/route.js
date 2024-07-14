@@ -16,4 +16,8 @@ router.get('/student/:name', (req, res)=>{
   
 router.post('/student', controller.saveStudent);
 
+router.put('/student', controller.updateStudent);
+
+router.delete('/student/:id', controller.deleteStudent);
+
 module.exports = router; 
